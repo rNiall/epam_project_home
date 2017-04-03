@@ -67,13 +67,88 @@ header {
 }
 .tools > ul {
     list-style-type: none;
+    font-size:12px;
+    text-transform: uppercase;
+}
+.tools > ul > li{
+    display: inline-block;
+    line-height: 32px;
 }
 .tools > ul.browse {
     float: left;
+    margin-left: 20px;
+}
+.tools > ul.browse > li a {
+    color: #666666;
+    padding:4px 8px;
+}
+.tools > ul.browse > li a:hover {
+    background: #36c3d8;
+    color: #ffffff;
+}
+.tools > ul.browse > li a.active {
+    background: #36c3d8;
+    color: #ffffff;
 }
 .tools > ul.user-tools {
     float: right;
 }
-.tools > ul > li{
-    display: inline-block;
+.tools > ul.user-tools {
+    float: right;
+}
+.tools > ul.user-tools > li a {
+    margin-left: 20px;
+    color: #9a9a9a;
+}
+.tools > ul.user-tools > li:last-child {
+    margin: 0 16px 0 25px;
+}
+.tools > ul.user-tools li a.share:before {
+    font-family: FontAwesome, serif;
+    content: '\f1e0';
+    margin-right: 5px;
+    font-size: larger;
+    font-weight: normal;
+}
+.tools > ul.user-tools li a.follow:before {
+    font-family: FontAwesome, serif;
+    content: '\f006';
+    margin-right: 5px;
+    font-size: larger;
+    font-weight: normal;
+}
+.tools > ul.user-tools li a.edit:before {
+    font-family: FontAwesome, serif;
+    content: '\f040';
+    margin-right: 5px;
+    font-size: larger;
+    font-weight: normal;
+}
+.tools > ul.user-tools li a.arrows:before {
+    font-family: FontAwesome, serif;
+    content: '\f0b2';
+    margin-right: 5px;
+    font-size: larger;
+    font-weight: normal;
+}
+.logo {
+    float: left;
+    height: 60px;
+    width: 100%;
+    background: #454446;
+    line-height:60px;
+}
+.logo img {
+    /*float: left;*/
+    /*padding: 14px 25px 14px 20px;*/
+    padding: 0 25px 0 20px;
+    vertical-align: middle;
+}
+.logo span{
+    color: #7ae6f7;
+    font-family: Oswald, serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height:60px;
 }
