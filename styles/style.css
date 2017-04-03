@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&subset=cyrillic');
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 @import "/styles/header.css";
 
 /* Blocks */
@@ -52,4 +54,8 @@ td,
 th {
     padding: 0;
     text-align: left;
+}
+
+a {
+    text-decoration: none;
 }
