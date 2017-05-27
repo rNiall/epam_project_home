@@ -5,7 +5,7 @@ header {
     font-family: 'Oswald', sans-serif;
 }
 .menu-sp {
-    width: 85%;
+    width: 83.5%;
     height: 28px;
     float: left;
     background: #36c3d8;
@@ -30,12 +30,13 @@ header {
 }
 
 .settings {
-    width: 15%;
+    width: 16.5%;
     height: 28px;
     background: #efefef;
     float: left;
 }
 .settings a {
+    text-align: right;
     color: #454446;
     line-height: 28px;
 }
