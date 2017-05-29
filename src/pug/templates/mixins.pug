@@ -1,0 +1,9 @@
+// table
+
+mixin session(session_request, session_date, session_status)
+        tr
+            td.session #{session_request}
+            td.min(data-label="Date") #{session_date}
+            td.min(data-label="Discount")
+                span.label_rejected #{session_status}
+

@@ -1,9 +1,4 @@
-mixin session(session_level, session_date, session_discount)
-    tr
-        td.session #{session_level}
-        td.min(data-label="Date") #{session_date}
-        td.min(data-label="Discount")
-            span.label_rejected #{session_discount}
+include mixins
 section.main
     .details
         input.search(placeholder="Search for a person")
