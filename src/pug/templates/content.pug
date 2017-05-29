@@ -1,3 +1,9 @@
+mixin session(session_level, session_date, session_discount)
+    tr
+        td.session #{session_level}
+        td.min(data-label="Date") #{session_date}
+        td.min(data-label="Discount")
+            span.label_rejected #{session_discount}
 section.main
     .details
         input.search(placeholder="Search for a person")
@@ -31,7 +37,17 @@ section.main
             button.tablinks(onclick="openTab(event, 'units')") my units
         .tabcontent#requests
             .requests_table
-                span Test
+                table.table-sortable.table-bordered
+                    thead(data-header="true")
+                        tr
+                            th(data-sort-column="true") Request
+                            th(data-sort-column="true") Date
+                            th(data-sort-column="true") Status
+                    tbody(data-body="true")
+                        +session("Praesent felis nibh, faucibus et interdum ut","07/24/2015","Rejected")
+                        +session("Praesent felis nibh, faucibus et interdum ut","07/24/2015","Rejected")
+                        +session("Praesent felis nibh, faucibus et interdum ut","07/24/2015","Rejected")
+                        +session("Praesent felis nibh, faucibus et interdum ut","07/24/2015","Rejected")
         .tabcontent#recently_viewed
             span Test 2
         .tabcontent#units
