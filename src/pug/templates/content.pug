@@ -27,9 +27,9 @@ section.main
                     span Number of room: 654
     .personal_info
         .tab
-            button.tablinks(onclick="openTab(event, 'requests')") my requests
-            button.tablinks(onclick="openTab(event, 'recently_viewed')") recently viewed units
-            button.tablinks(onclick="openTab(event, 'units')") my units
+            button.tablinks(onclick="openTab(event, 'requests')", id="defaultOpen") My requests
+            button.tablinks(onclick="openTab(event, 'recently_viewed')") Recently viewed units
+            button.tablinks(onclick="openTab(event, 'units')") My units
         .tabcontent#requests
             .requests_table
                 table.table-sortable.table-bordered
