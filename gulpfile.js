@@ -76,6 +76,7 @@ gulp.task('watch', function() {
 //Server
 gulp.task('serve', function() {
     browserSync.init({
+        notify: false,
         server: 'dist'
     });
     browserSync.watch('dist/**/*.*').on('change', browserSync.reload);
