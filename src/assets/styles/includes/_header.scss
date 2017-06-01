@@ -6,32 +6,48 @@ header {
     background: #36c3d8;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 
-    a.header__logo {
-      display: inline-block;
-      
-      
-      img {
-        padding: 3px 0 3px 20px;
+    .header_left {
+      display: flex;
+
+      a.header__logo {
+        display: inline-block;
+
+
+        img {
+          padding: 3px 0 3px 20px;
+        }
       }
     }
+
     .header_right{
       display: flex;
-      
+
       ul.header_links {
         list-style: none;
         margin: 0;
-        
+        padding: 0;
+        line-height: 28px;
+        display: inline-flex;
+
         li{
-          display: inline-block;
+
           
           a {
-            display: block;
             text-decoration: none;
             color: #fff;
+            padding: 1rem;
             
           }
         }
+      }
+
+      .user {
+        background: $headerGrey;
+        line-height: 28px;
+        padding: 0 2rem;
       }
     }
   }
