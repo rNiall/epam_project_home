@@ -1,5 +1,5 @@
 .main{
-
+  margin-bottom: 40px;
   .row {
     display: flex;
     flex-direction: row;
@@ -86,6 +86,65 @@
         font-size: 36px;
         content: '';
         padding: 10px 15px;
+      }
+    }
+  }
+
+  .office_info {
+
+    .header_office{
+      height: 40px;
+      background-color: #999999;
+      font-size: 18px;
+      font-weight: 400;
+      color: #fff;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 40px;
+    }
+
+    .office_details {
+      border: 1px solid #cdcdcd;
+      padding: 20px 15px 60px 15px;
+
+      .office_location {
+        margin-bottom: 10px;
+
+        li {
+          display: inline-block;
+          color: #666666;
+
+          &::after {
+            content: '>';
+            margin:0 5px;
+          }
+        }
+      }
+
+      .floors {
+        margin-bottom: 15px;
+
+        li {
+          display: inline-block;
+          color: #666666;
+          
+          &.title{
+            display: block;
+            margin-bottom:10px;
+          }
+
+          &.circle {
+            width:20px;
+            height:20px;
+            border-radius: 50%;
+            border: 1px solid #666666;
+            text-align: center;
+          }
+        }
+      }
+
+      .office_numbers {
+        color: #666666;
       }
     }
   }
