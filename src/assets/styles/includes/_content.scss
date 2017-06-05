@@ -148,4 +148,37 @@
       }
     }
   }
+
+  .personal_info {
+    border: 1px solid #cdcdcd;
+
+    .tab {
+      overflow: hidden;
+      display: flex;
+      background-color: #3ac2d7;
+
+      button {
+        background-color: inherit;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #fff;
+        
+        &#defaultOpen {
+          background-color: #fff;
+          color: #3ac2d7;
+        }
+
+        &:hover {
+          background-color: #fff;
+          color: #3ac2d7;
+        }
+      }
+    }
+  }
 }
