@@ -46,7 +46,7 @@ header {
       }
 
       .user {
-        background: $headerGrey;
+        background: $headerGray;
         line-height: 28px;
         padding: 0 1.25rem 0 1.4375rem;
 
@@ -66,7 +66,7 @@ header {
         .settings:after {
            font-family: FontAwesome, serif;
            content: '\f013';
-          color: $iconGrey;
+          color: $iconGray;
            margin-left: 15px;
            font-weight: normal;
          }
@@ -74,7 +74,7 @@ header {
         .help:after {
           font-family: FontAwesome, serif;
           content: '\f059';
-          color: $iconGrey;
+          color: $iconGray;
           margin-left: 15px;
           font-weight: normal;
         }
@@ -82,7 +82,7 @@ header {
     }
   }
   .user_navigation {
-    background: $headerGrey;
+    background: $headerGray;
     padding: 0 1.25rem;
     height: 2rem;
     display: flex;
@@ -150,12 +150,13 @@ header {
           }
 
           &.arrows:before {
+            margin-right: 0;
             content: '\f0b2';
           }
         }
       }
       li:last-child {
-        margin: 0 16px 0 25px;
+        margin-left: 25px;
       }
     }
   }
