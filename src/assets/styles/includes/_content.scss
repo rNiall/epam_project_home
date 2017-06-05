@@ -8,12 +8,11 @@
 
   .details{
     position: relative;
-    flex: 1 1 auto;
     margin-right: 25px;
   }
 
   .personal_info{
-    flex: 2.3 1 auto;
+    flex: 3 1 auto;
   }
 
   form{
@@ -51,18 +50,43 @@
     display: flex;
 
     .request, .look {
-      flex: 1 1 0;
+      display: flex;
+      font-size:16px;
+      font-weight:400;
+      text-align: center;
+      text-transform: uppercase;
+      width: 196px;
+      align-items: center;
+      height: 60px;
       margin-top: 10px;
       margin-bottom: 10px;
+      cursor: pointer;
+
     }
 
     .request {
       margin-right: 8px;
       background-color: #a3c644;
+      color: #fff;
+
+      &::before {
+        font-family: FontAwesome, serif;
+        font-size: 36px;
+        content: '\f0b2';
+        padding: 10px 10px 10px 15px;
+      }
     }
 
     .look {
       background-color: #937ebd;
+      color: #fff;
+
+      &::before {
+        font-family: FontAwesome, serif;
+        font-size: 36px;
+        content: '';
+        padding: 10px 15px;
+      }
     }
   }
 }
