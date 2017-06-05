@@ -1,49 +1,49 @@
 include mixins
 section.main
-    .details
-        input.search(placeholder="Search for a person")
-        .actions
-            .request
-                .text Move Request
-            .look
-                .text Look for available place
-        .office_info
-            .header_office my office
-            .office_details
-                ul.office_location
-                    li.arrow Russia
-                    li.arrow Saint-Petersburg
-                    li.arrow Nab.Chyornoy rechki
-                ul.floors
-                    li.title Floors:
-                    li.circle 1
-                    li.circle 2
-                    li.circle 3
-                    li.circle 4
-                    li.circle ...
-                    li.circle 25
-                .office_numbers
-                    span Unit: 654
-                    span Number of room: 654
-    .personal_info
-        .tab
-            button.tablinks(onclick="openTab(event, 'requests')", id="defaultOpen") My requests
-            button.tablinks(onclick="openTab(event, 'recently_viewed')") Recently viewed units
-            button.tablinks(onclick="openTab(event, 'units')") My units
-        .tabcontent#requests
-            .requests_table
-                table.table-sortable.table-bordered
-                    thead(data-header="true")
-                        tr
-                            th(data-sort-column="true") Request
-                            th(data-sort-column="true") Date
-                            th(data-sort-column="true") Status
-                    tbody(data-body="true")
-                        +session("Praesent felis nibh, faucibus et interdum ut","07/24/2015","Rejected")
-                        +session("Praesent felis nibh, faucibus et interdum ut","07/24/2015","Rejected")
-                        +session("Praesent felis nibh, faucibus et interdum ut","07/24/2015","Rejected")
-                        +session("Praesent felis nibh, faucibus et interdum ut","07/24/2015","Rejected")
-        .tabcontent#recently_viewed
-            span Test 2
-        .tabcontent#units
-            span Test 3
+    .wrapper.row
+        .details
+            form(action='#')
+                input.search(placeholder="Search for a person")
+            .actions
+                .request Move Request
+                .look Look for available place
+            .office_info
+                .header_office my office
+                .office_details
+                    ul.office_location
+                        li.arrow Russia
+                        li.arrow Saint-Petersburg
+                        li.arrow Nab.Chyornoy rechki
+                    ul.floors
+                        li.title Floors:
+                        li.circle 1
+                        li.circle 2
+                        li.circle 3
+                        li.circle 4
+                        li.circle ...
+                        li.circle 25
+                    .office_numbers
+                        span Unit: 654
+                        span Number of room: 654
+        .personal_info
+            .tab
+                button.tablinks(onclick="openTab(event, 'requests')", id="defaultOpen") My requests
+                button.tablinks(onclick="openTab(event, 'recently_viewed')") Recently viewed units
+                button.tablinks(onclick="openTab(event, 'units')") My units
+            .tabcontent#requests
+                .requests_table
+                    table.table-sortable.table-bordered
+                        thead(data-header="true")
+                            tr
+                                th(data-sort-column="true") Request
+                                th(data-sort-column="true") Date
+                                th(data-sort-column="true") Status
+                        tbody(data-body="true")
+                            +session("Praesent felis nibh, faucibus et interdum ut","07/24/2015","Rejected")
+                            +session("Praesent felis nibh, faucibus et interdum ut","07/24/2015","Rejected")
+                            +session("Praesent felis nibh, faucibus et interdum ut","07/24/2015","Rejected")
+                            +session("Praesent felis nibh, faucibus et interdum ut","07/24/2015","Rejected")
+            .tabcontent#recently_viewed
+                span Test 2
+            .tabcontent#units
+                span Test 3

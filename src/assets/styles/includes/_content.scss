@@ -1,0 +1,68 @@
+.main{
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .details{
+    position: relative;
+    flex: 1 1 auto;
+    margin-right: 25px;
+  }
+
+  .personal_info{
+    flex: 2.3 1 auto;
+  }
+
+  form{
+
+    input.search {
+      width: 100%;
+      font-size:12px;
+      color: #7e7e7e;
+      padding:10px;
+      border: 1px solid #cdcdcd;
+      box-sizing: border-box;
+
+      &::placeholder {
+        color: #7e7e7e;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &::before {
+      font-family: FontAwesome, serif;
+      content: '\f002';
+      position: absolute;
+      display: block;
+      color: #acacac;
+      right: 0;
+      padding: 10px;
+
+    }
+  }
+
+  .actions {
+    display: flex;
+
+    .request, .look {
+      flex: 1 1 0;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .request {
+      margin-right: 8px;
+      background-color: #a3c644;
+    }
+
+    .look {
+      background-color: #937ebd;
+    }
+  }
+}
