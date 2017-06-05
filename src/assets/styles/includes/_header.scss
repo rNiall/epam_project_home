@@ -2,28 +2,26 @@ header {
   width: 100%;
 
   nav.header_sp {
-    height: 28px;
     background: #36c3d8;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 
-    .header_left {
-      display: flex;
-
       a.header__logo {
-        display: inline-block;
+        height: 28px;
+        padding-left: 1.25rem;
+
 
 
         img {
-          padding: 3px 0 3px 20px;
+          padding: 3px 0;
         }
       }
-    }
 
     .header_right{
       display: flex;
+      height: 28px;
 
       ul.header_links {
         list-style: none;
@@ -38,8 +36,11 @@ header {
           a {
             text-decoration: none;
             color: #fff;
-            padding: 1rem;
+            padding: .2rem 1rem;
             
+          }
+          &:last-child {
+            margin-right: 0.875rem;
           }
         }
       }
@@ -47,8 +48,135 @@ header {
       .user {
         background: $headerGrey;
         line-height: 28px;
-        padding: 0 2rem;
+        padding: 0 1.25rem 0 1.4375rem;
+
+        a {
+          text-decoration: none;
+          color: #454446;
+          font-size: .9rem;
+
+          &::after {
+            font-family: FontAwesome, serif;
+            content: '\f0d7';
+            margin-left: 15px;
+            font-weight: normal;
+          }
+        }
+
+        .settings:after {
+           font-family: FontAwesome, serif;
+           content: '\f013';
+          color: $iconGrey;
+           margin-left: 15px;
+           font-weight: normal;
+         }
+
+        .help:after {
+          font-family: FontAwesome, serif;
+          content: '\f059';
+          color: $iconGrey;
+          margin-left: 15px;
+          font-weight: normal;
+        }
       }
     }
   }
+  .user_navigation {
+    background: $headerGrey;
+    padding: 0 1.25rem;
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul.browse, ul.user_tools {
+      display: inline-flex;
+      
+      a{
+        font-size:12px;
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+
+    ul.browse {
+
+      li {
+        padding-right: 5px;
+      }
+
+      a{
+        color: #666666;
+        padding: .2rem .625rem;
+
+        &.active {
+          color: #fff;
+          background: $mainBlue;
+        }
+
+        &:hover {
+          color: #fff;
+          background: $mainBlue;
+        }
+      }
+    }
+
+    ul.user_tools {
+
+      li{
+
+        a {
+          margin-left: 20px;
+          color: #9a9a9a;
+
+          &.share:before, &.follow:before, &.edit:before, &.arrows:before {
+            font-family: FontAwesome, serif;
+            margin-right: 5px;
+            font-size: larger;
+            font-weight: normal;
+          }
+
+          &.share:before {
+            content: '\f1e0';
+          }
+
+          &.follow:before {
+            content: '\f006';
+          }
+
+          &.edit:before {
+            content: '\f040';
+          }
+
+          &.arrows:before {
+            content: '\f0b2';
+          }
+        }
+      }
+      li:last-child {
+        argin: 0 16px 0 25px;
+      }
+    }
+  }
+
+  .logo {
+    height: 62px;
+    background-color: #454446;
+
+    img {
+      padding: 0 25px 0 20px;
+      vertical-align: middle;
+    }
+
+    span{
+      color: #7ae6f7;
+      font-family: Oswald, serif;
+      font-size: 18px;
+      font-weight: 400;
+      text-transform: uppercase;
+      line-height:62px;
+    }
+  }
+
 }

@@ -15,13 +15,15 @@ const gulp = require('gulp'),
             pug: 'src/pug/*.pug',
             style: 'src/assets/styles/styles.scss',
             js:'src/assets/js/**',
-            img: 'src/assets/img/*.*'
+            img: 'src/assets/img/*.*',
+            fonts: 'src/assets/fonts/**'
         },
         dist: {
             html: 'dist',
             css: 'dist/assets/style/',
             js: 'dist/assets/js',
-            img: 'dist/assets/img/'
+            img: 'dist/assets/img/',
+            fonts: 'dist/assets/fonts/'
         }
     };
 
@@ -57,13 +59,19 @@ gulp.task('img', function() {
         .pipe(gulp.dest(path.dist.img));
 });
 
+//Fonts
+gulp.task('fonts', function () {
+    return gulp.src(path.src.fonts)
+        .pipe(gulp.dest(path.dist.fonts))
+});
+
 gulp.task('clean', function() {
     return del('dist');
 });
 
 gulp.task('build', gulp.series(
     'clean',
-    gulp.parallel('pug','styles', 'js', 'img'))
+    gulp.parallel('pug','styles', 'js', 'img', 'fonts'))
 );
 
 gulp.task('watch', function() {
