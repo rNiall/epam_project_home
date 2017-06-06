@@ -1,0 +1,66 @@
+table.table-sortable {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:14px;
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    padding:18px 0 15px 0;
+    text-align: left;
+    border-bottom: 2px solid #d2d2d2;
+
+    &.active {
+      color: #3ac2d7;
+      border-bottom: 2px solid #3ac2d7;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        font-family: FontAwesome, serif;
+        font-size: 22px;
+        content: '\f107';
+        margin-left: 5px;
+        bottom: 10px;
+
+
+      }
+    }
+    &:first-child {
+      padding-left: 15px;
+
+    }
+  }
+
+  tbody {
+    height:300px;
+    overflow-x:auto;
+    margin-top: 0;
+
+    tr {
+
+      &:nth-child(odd) {
+        background-color: #f5f5f5;
+      }
+    }
+  }
+
+  td {
+    padding:14px 0;
+
+    &:first-child {
+      padding-left: 15px;
+    }
+
+    .label_rejected {
+      font-size:12px;
+      color: #fff;
+      padding: 5px 12px;
+      background-color: #b32746;
+
+      &:hover {
+        background-color: lighten(#b32746, 10%);
+        cursor: pointer;
+      }
+    }
+  }
+}
