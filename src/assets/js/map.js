@@ -109,7 +109,7 @@ function initMap() {
     var locations = [
         {
             title: 'test',
-            position: {lat: 59.9342802, lng: 30.3350986},
+            position: {lat: 50.9342802, lng: 30.3350986},
             icon: {
                 url: "assets/img/marker.png",
                 scaledSize: new google.maps.Size(18, 27)
