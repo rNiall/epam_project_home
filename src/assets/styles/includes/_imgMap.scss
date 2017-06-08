@@ -1,0 +1,66 @@
+section.geography {
+  margin-top: 25px;
+  margin-bottom: 40px;
+
+  .map{
+    max-width: 1052px;
+    margin: 0 auto;
+    position: relative;
+
+    .marker {
+      position: absolute;
+    }
+
+  }
+
+  .countries {
+    position: absolute;
+    bottom: 0;
+    width: 160px;
+
+    .count__number {
+      color: $mainGray;
+      font-size: 11rem;
+      line-height: 1;
+      font-weight: 400;
+      letter-spacing: -1rem;
+    }
+
+    .count__text {
+      color: $mainGray;
+      font-size: 1.125rem;
+      font-weight: 400;
+      text-align: center;
+      line-height: 30px;
+    }
+
+    .way {
+      display: flex;
+
+      .employees, .experience {
+        width: 50%;
+        color: $mainGray;
+        font-size: .9rem;
+        text-align: center;
+
+        &::before{
+          display: inline-block;
+          border: 1px solid $mainGray;
+          border-radius: 50%;
+          font-family: FontAwesome, serif;
+          margin: 14px 0;
+        }
+      }
+
+      .employees::before {
+        padding: 5px 6px;
+        content: '\f0c0';
+      }
+
+      .experience::before {
+        padding: 5px 7px;
+        content: '\f250';
+      }
+    }
+  }
+}
