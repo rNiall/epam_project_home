@@ -105,4 +105,33 @@ function initMap() {
             }
         ]
     });
+
+    var locations = [
+        {
+            title: 'test',
+            position: {lat: 59.9342802, lng: 30.3350986},
+            icon: {
+                url: "assets/img/marker.png",
+                scaledSize: new google.maps.Size(18, 27)
+            }
+
+        },
+        {
+            title: 'test',
+            position: {lat: 48.85484, lng: 2.366427},
+            icon: {
+                url: "assets/img/marker.png",
+                scaledSize: new google.maps.Size(18, 27)
+            }
+        }
+    ];
+
+    locations.forEach( function( element, index ){
+        var marker = new google.maps.Marker({
+            position: element.position,
+            map: map,
+            title: element.title,
+            icon: element.icon,
+        });
+    });
 }
