@@ -3,6 +3,12 @@ function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 41.41085705873785, lng: 13.281021118164029},
         zoom: 2,
+        disableDefaultUI: true,
+        scrollwheel: false,
+        navigationControl: false,
+        mapTypeControl: false,
+        scaleControl: false,
+        draggable: false,
         styles: [
             {
                 "elementType": "labels",
