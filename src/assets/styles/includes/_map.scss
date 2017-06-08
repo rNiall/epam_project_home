@@ -1,11 +1,18 @@
 section.geography {
   margin-top: 25px;
   margin-bottom: 40px;
+
+  .wrapper {
+    height: 700px;
+  }
   
   #map{
+    height: 100%;
+    max-width: 1020px;
     margin: 0 auto;
-    text-align: center;
+    //text-align: center;
     position: relative;
+
   }
 
   .countries {
