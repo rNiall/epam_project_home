@@ -169,7 +169,7 @@
         text-transform: uppercase;
         color: #fff;
         
-        &#defaultOpen {
+        &.active {
           background-color: #fff;
           color: #3ac2d7;
         }
