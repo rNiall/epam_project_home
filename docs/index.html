@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/style/styles.css">
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+    <title>Epam Home</title>
+  </head>
+  <body>
+    <header>
+      <div class="mobile-menu">
+        <div class="mobile-menu__middle"></div>
+      </div>
+      <div class="menu">
+        <nav class="header_sp"><a class="header__logo" href="#"><img src="assets/img/sharepoint_logo.png"></a>
+          <div class="header_right">
+            <ul class="header_links">
+              <li><a href="#">My Sites</a></li>
+              <li><a href="#">Yammer</a></li>
+              <li><a href="#">OneDrive</a></li>
+              <li><a href="#">Sites</a></li>
+            </ul>
+            <div class="user"><a href="#">Elizaveta Eliseeva</a><span class="settings"></span><span class="help"></span></div>
+          </div>
+        </nav>
+        <div class="user_navigation">
+          <ul class="browse">
+            <li><a class="active" href="#">Browse</a></li>
+            <li><a href="#">Files</a></li>
+            <li><a href="#">Library</a></li>
+          </ul>
+          <ul class="user_tools">
+            <li><a class="share" href="#">Share</a></li>
+            <li><a class="follow" href="#">Follow</a></li>
+            <li><a class="edit" href="#">Edit</a></li>
+            <li><a class="arrows" href="#"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="logo"><a href="#"><img src="/assets/img/Logo_Epam_Color.png" alt="Epam"></a><span class="logo_name">office space management portal</span></div>
+    </header>
+    <!--include templates/map-->
+    <!--Created by Stanislav on 08.06.2017.
+    -->
+    <section class="geography">
+      <div class="wrapper">
+        <div class="map"><img src="assets/img/map_without_markers.png">
+          <div class="marker" style="top: 19%;left: 55%;"><img src="assets/img/marker.png"><span class="popuptext">City 1</span></div>
+          <div class="marker" style="top: 26.4%;left: 53%;"><img src="assets/img/marker.png"><span class="popuptext">City 2</span></div>
+          <div class="marker" style="top: 28.5%;left: 51.4%;"><img src="assets/img/marker.png"><span class="popuptext">City 3</span></div>
+          <div class="marker" style="top: 31.7%;left: 55.5%;"><img src="assets/img/marker.png"><span class="popuptext">City 4</span></div>
+          <div class="marker" style="top: 33.5%;left: 80.5%;"><img src="assets/img/marker.png"><span class="popuptext">City 5</span></div>
+          <div class="marker" style="top: 38%;left: 22%;"><img src="assets/img/marker.png"><span class="popuptext">City 6</span></div>
+          <div class="marker" style="top: 34%;left: 16.5%;"><img src="assets/img/marker.png"><span class="popuptext">City 7</span></div>
+        </div>
+        <div class="countries">
+          <div class="count">
+            <div class="count__number">19</div>
+            <div class="count__text">Countries Worldwide</div>
+          </div>
+          <div class="way">
+            <div class="employees">
+              <div class="way__text">15 000+ Employees</div>
+            </div>
+            <div class="experience">
+              <div class="way__text">30 Years<br>in Business</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- table-->
+    <section class="main">
+      <div class="wrapper row">
+        <div class="details">
+          <form action="#">
+            <input class="search" placeholder="Search for a person">
+          </form>
+          <div class="actions">
+            <div class="request">MOVEMENT REQUEST</div>
+            <div class="look">Look for<br>available place</div>
+          </div>
+          <div class="office_info">
+            <div class="header_office">my office</div>
+            <div class="office_details">
+              <ul class="office_location">
+                <li class="arrow">Russia</li>
+                <li class="arrow">Saint-Petersburg</li>
+                <li class="arrow">Nab.Chyornoy rechki</li>
+              </ul>
+              <ul class="floors">
+                <li class="title">Floors:</li>
+                <li class="circle">1</li>
+                <li class="circle">2</li>
+                <li class="circle">3</li>
+                <li class="circle">4</li>
+                <li class="circle">...</li>
+                <li class="circle">25</li>
+              </ul>
+              <ul class="office_numbers">
+                <li>Unit: 654</li>
+                <li>Number of room: 654</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="personal_info">
+          <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'requests')" id="defaultOpen">My requests</button>
+            <button class="tablinks" onclick="openTab(event, 'recently_viewed')">Recently viewed units</button>
+            <button class="tablinks" onclick="openTab(event, 'units')">My units</button>
+          </div>
+          <div class="tabcontent" id="requests">
+            <div class="requests_table">
+              <table class="table-sortable table-bordered">
+                <thead data-header="true">
+                  <tr>
+                    <th data-sort-column="true">Request</th>
+                    <th class="active" data-sort-column="true">Date</th>
+                    <th data-sort-column="true">Status</th>
+                  </tr>
+                </thead>
+                <tbody data-body="true">
+                      <tr>
+                        <td class="session">Praesent felis nibh, faucibus et interdum ut1</td>
+                        <td class="min" data-label="Date">07/24/2015</td>
+                        <td class="min" data-label="Discount"><span class="label_rejected">Rejected</span></td>
+                      </tr>
+                      <tr>
+                        <td class="session">Praesent felis nibh, faucibus et interdum ut2</td>
+                        <td class="min" data-label="Date">07/24/2016</td>
+                        <td class="min" data-label="Discount"><span class="label_rejected">Rejected</span></td>
+                      </tr>
+                      <tr>
+                        <td class="session">Praesent felis nibh, faucibus et interdum ut3</td>
+                        <td class="min" data-label="Date">07/24/2015</td>
+                        <td class="min" data-label="Discount"><span class="label_rejected">Rejected</span></td>
+                      </tr>
+                      <tr>
+                        <td class="session">Praesent felis nibh, faucibus et interdum ut4</td>
+                        <td class="min" data-label="Date">07/24/2017</td>
+                        <td class="min" data-label="Discount"><span class="label_rejected">Rejected</span></td>
+                      </tr>
+                      <tr>
+                        <td class="session">Praesent felis nibh, faucibus et interdum ut5</td>
+                        <td class="min" data-label="Date">07/25/2017</td>
+                        <td class="min" data-label="Discount"><span class="label_rejected">Rejected</span></td>
+                      </tr>
+                      <tr>
+                        <td class="session">Praesent felis nibh, faucibus et interdum ut6</td>
+                        <td class="min" data-label="Date">08/24/2017</td>
+                        <td class="min" data-label="Discount"><span class="label_rejected">Rejected</span></td>
+                      </tr>
+                      <tr>
+                        <td class="session">Praesent felis nibh, faucibus et interdum ut7</td>
+                        <td class="min" data-label="Date">07/24/2015</td>
+                        <td class="min" data-label="Discount"><span class="label_rejected">Rejected</span></td>
+                      </tr>
+                      <tr>
+                        <td class="session">Praesent felis nibh, faucibus et interdum ut8</td>
+                        <td class="min" data-label="Date">07/24/2015</td>
+                        <td class="min" data-label="Discount"><span class="label_rejected">Rejected</span></td>
+                      </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tabcontent" id="recently_viewed"><span>Test 2</span></div>
+          <div class="tabcontent" id="units"><span>Test 3</span></div>
+        </div>
+      </div>
+    </section>
+    <script src="assets/js/mobileNav.js"></script>
+    <script src="assets/js/imgMap.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/table.js"></script>
+    <!--script(src="assets/js/map.js")-->
+    <!--script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsA9BHXC2Z6lS8eYnHY-Vqg9PakeW7CPE&callback=initMap" async defer)-->
+  </body>
+</html>

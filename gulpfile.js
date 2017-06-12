@@ -18,12 +18,12 @@ const gulp = require('gulp'),
             img: 'src/assets/img/*.*',
             fonts: 'src/assets/fonts/**'
         },
-        dist: {
-            html: 'dist',
-            css: 'dist/assets/style/',
-            js: 'dist/assets/js',
-            img: 'dist/assets/img/',
-            fonts: 'dist/assets/fonts/'
+        docs: {
+            html: 'docs',
+            css: 'docs/assets/style/',
+            js: 'docs/assets/js',
+            img: 'docs/assets/img/',
+            fonts: 'docs/assets/fonts/'
         }
     };
 
@@ -35,7 +35,7 @@ gulp.task('pug', function() {
         .pipe(pug({
             pretty: true
         }))
-        .pipe(gulp.dest(path.dist.html))
+        .pipe(gulp.dest(path.docs.html))
 });
 
 //style
@@ -45,28 +45,28 @@ gulp.task('styles', function(){
         .pipe(sass().on('error', sass.logError))
         // .pipe(autoprefixer(['last 3 versions', '> 1%'], { cascade: true }))
         .pipe(gulpIf(isDevelopment, sourcemaps.write()))
-        .pipe(gulp.dest(path.dist.css))
+        .pipe(gulp.dest(path.docs.css))
 });
 
 //js
 gulp.task('js', function () {
     return gulp.src(path.src.js)
-        .pipe(gulp.dest(path.dist.js))
+        .pipe(gulp.dest(path.docs.js))
 });
 
 gulp.task('img', function() {
     return gulp.src(path.src.img, {since: gulp.lastRun('img')})
-        .pipe(gulp.dest(path.dist.img));
+        .pipe(gulp.dest(path.docs.img));
 });
 
 //Fonts
 gulp.task('fonts', function () {
     return gulp.src(path.src.fonts)
-        .pipe(gulp.dest(path.dist.fonts))
+        .pipe(gulp.dest(path.docs.fonts))
 });
 
 gulp.task('clean', function() {
-    return del('dist');
+    return del('docs');
 });
 
 gulp.task('build', gulp.series(
@@ -85,9 +85,9 @@ gulp.task('watch', function() {
 gulp.task('serve', function() {
     browserSync.init({
         notify: false,
-        server: 'dist'
+        server: 'docs'
     });
-    browserSync.watch('dist/**/*.*').on('change', browserSync.reload);
+    browserSync.watch('docs/**/*.*').on('change', browserSync.reload);
 });
 
 gulp.task('dev',
