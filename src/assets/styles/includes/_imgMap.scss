@@ -1,6 +1,10 @@
 section.geography {
   margin-top: 25px;
   margin-bottom: 40px;
+  
+  @include desktops{
+    background-image: none;
+  }
 
   .map{
     display: none;
