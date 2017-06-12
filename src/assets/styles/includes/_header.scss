@@ -1,9 +1,29 @@
 header {
   width: 100%;
 
+  .menu {
+    opacity: 0;
+    transform: translateY(-90px);
+    transition: all .3s ease-out;
+    position: absolute;
+
+    &.is-visible {
+      opacity: 1;
+      width:100%;
+      transform: translateY(0);
+      transition: transform .3s ease-out;
+    }
+
+    @include tablets {
+      position: relative;
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
   nav.header_sp {
-    background: #36c3d8;
     display: flex;
+    background: #36c3d8;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -83,11 +103,12 @@ header {
   }
   .user_navigation {
     background: $headerGray;
+    display: flex;
     padding: 0 1.25rem;
     height: 2rem;
-    display: flex;
     justify-content: space-between;
     align-items: center;
+
 
     ul.browse, ul.user_tools {
       display: inline-flex;

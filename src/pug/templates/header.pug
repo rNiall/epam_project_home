@@ -1,40 +1,41 @@
 header
     .mobile-menu
         .mobile-menu__middle
-    nav.header_sp
-        a(class="header__logo" href="#")
-            img(src="assets/img/sharepoint_logo.png")
-        .header_right
-            ul.header_links
+    .menu
+        nav.header_sp
+            a(class="header__logo" href="#")
+                img(src="assets/img/sharepoint_logo.png")
+            .header_right
+                ul.header_links
+                    li
+                        a(href="#") My Sites
+                    li
+                        a(href="#") Yammer
+                    li
+                        a(href="#") OneDrive
+                    li
+                        a(href="#") Sites
+                .user
+                    a(href="#") Elizaveta Eliseeva
+                    span.settings
+                    span.help
+        .user_navigation
+            ul.browse
                 li
-                    a(href="#") My Sites
+                    a(class="active" href="#") Browse
                 li
-                    a(href="#") Yammer
+                    a(href="#") Files
                 li
-                    a(href="#") OneDrive
+                    a(href="#") Library
+            ul.user_tools
                 li
-                    a(href="#") Sites
-            .user
-                a(href="#") Elizaveta Eliseeva
-                span.settings
-                span.help
-    .user_navigation
-        ul.browse
-            li
-                a(class="active" href="#") Browse
-            li
-                a(href="#") Files
-            li
-                a(href="#") Library
-        ul.user_tools
-            li
-                a(class="share" href="#") Share
-            li
-                a(class="follow" href="#") Follow
-            li
-                a(class="edit" href="#") Edit
-            li
-                a(class="arrows" href="#")
+                    a(class="share" href="#") Share
+                li
+                    a(class="follow" href="#") Follow
+                li
+                    a(class="edit" href="#") Edit
+                li
+                    a(class="arrows" href="#")
     .logo
         a(href="#")
             img(src="/assets/img/Logo_Epam_Color.png" alt="Epam")

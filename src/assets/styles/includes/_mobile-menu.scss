@@ -5,6 +5,9 @@
   z-index: 10;
   top: 10px;
   right: 10px;
+  @include tablets{
+    display: none;
+  }
 
   &::before {
     content: "";
@@ -41,7 +44,7 @@
     transition: transform .3s ease-out;
   }
 
-  &--close-x {
+  &--close {
     &::before {
       transform: rotate(45deg) scaleX(1.25);
     }
