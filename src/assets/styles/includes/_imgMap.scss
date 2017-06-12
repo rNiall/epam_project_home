@@ -3,20 +3,32 @@ section.geography {
   margin-bottom: 40px;
 
   .map{
-    max-width: 1052px;
-    margin: 0 auto;
-    position: relative;
+    display: none;
+    @include desktops{
+      display: block;
+      max-width: 1052px;
+      margin: 0 auto;
+      position: relative;
+    }
 
     .marker {
       position: absolute;
     }
 
+    img {
+      max-width: 100%;
+    }
+
   }
 
   .countries {
-    position: absolute;
     bottom: 0;
     width: 160px;
+    position: relative;
+    margin: 0 auto;
+    @include desktops{
+      position: absolute;
+    }
 
     .count__number {
       color: $mainGray;

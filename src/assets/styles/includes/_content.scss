@@ -8,7 +8,11 @@
 
   .details{
     position: relative;
-    margin-right: 25px;
+    margin-bottom:20px;
+    flex: 1 1 auto;
+    @include desktops {
+      margin-right: 25px;
+    }
   }
 
   .personal_info{
@@ -68,6 +72,10 @@
       margin-right: 8px;
       background-color: #a3c644;
       color: #fff;
+      flex: 1 1 auto;
+      @include desktops {
+
+      }
 
       &::before {
         font-family: FontAwesome, serif;
@@ -80,6 +88,10 @@
     .look {
       background-color: #937ebd;
       color: #fff;
+      flex: 1 1 auto;
+      @include desktops {
+
+      }
 
       &::before {
         font-family: FontAwesome, serif;
