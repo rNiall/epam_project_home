@@ -23,11 +23,14 @@ header {
   }
 
   nav.header_sp {
-    display: flex;
     background: #36c3d8;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+
+    @include tablets {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
       a.header__logo {
         height: 28px;
@@ -41,25 +44,53 @@ header {
       }
 
     .header_right{
-      display: flex;
-      height: 28px;
+
+      @include tablets {
+        display: flex;
+        height: 28px;
+      }
 
       ul.header_links {
         list-style: none;
         margin: 0;
-        padding: 0;
+        padding: 0 0 0 1.4375rem;
         line-height: 28px;
         display: inline-flex;
 
+        @include tablets {
+          padding: 0;
+        }
+
         li{
 
+          font-size: 15px;
+
+          @include tablets {
+            font-size:16px;
+          }
           
           a {
             text-decoration: none;
             color: #fff;
-            padding: .2rem 1rem;
-            
+            padding: .2rem .6rem;
+
+            @include tablets {
+              padding: .2rem 1rem;
+            }
           }
+
+          &:first-child {
+            a{
+              padding-left: 0;
+
+
+              @include tablets {
+                padding: .2rem .6rem;
+              }
+
+            }
+          }
+
           &:last-child {
             margin-right: 0.875rem;
           }
@@ -104,15 +135,19 @@ header {
   }
   .user_navigation {
     background: $headerGray;
-    display: flex;
-    padding: 0 1.25rem;
-    height: 2rem;
-    justify-content: space-between;
-    align-items: center;
+    padding: 0 1.25rem 0 1.4375rem;
+
+    @include tablets {
+      display: flex;
+      height: 32px;
+      justify-content: space-between;
+      align-items: center;
+    }
 
 
     ul.browse, ul.user_tools {
       display: inline-flex;
+      padding: .375rem 0;
       
       a{
         font-size:12px;
@@ -177,6 +212,14 @@ header {
           }
         }
       }
+      li:first-child a{
+        margin-left: 0;
+
+        @include tablets {
+          margin-left: 20px;
+        }
+      }
+
       li:last-child {
         margin-left: 25px;
       }
