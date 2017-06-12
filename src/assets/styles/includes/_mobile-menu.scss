@@ -54,7 +54,6 @@
   &--close {
     &::before {
       transform: rotate(45deg) scaleX(1.25);
-      background-color: #000;
     }
 
     .mobile-menu__middle {
@@ -64,7 +63,6 @@
 
     &::after {
       transform: rotate(-45deg) scaleX(1.25) translateY(0);
-      background-color: #000;
     }
   }
 }

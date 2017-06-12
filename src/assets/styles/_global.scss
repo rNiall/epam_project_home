@@ -16,6 +16,10 @@ ul {
 
 .wrapper {
   position: relative;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
+
+  @include tablets {
+    width: 90%;
+  }
 }

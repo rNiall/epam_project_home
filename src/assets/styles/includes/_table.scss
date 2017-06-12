@@ -45,7 +45,11 @@ table.table-sortable {
   }
 
   td {
-    padding:14px 0;
+    padding: 14px 5px 14px 0;
+
+    @include tablets {
+      padding:14px 0;
+    }
 
     &:first-child {
       padding-left: 15px;
