@@ -24,6 +24,10 @@ section.geography {
         transform: scale(1.2);
       }
 
+      &:focus{
+
+      }
+
       .popuptext {
         visibility: hidden;
         width: 160px;
