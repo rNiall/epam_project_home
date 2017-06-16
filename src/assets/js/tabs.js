@@ -1,6 +1,6 @@
 'use strict';
 
-window.onload = function Tabs() {
+function Tabs() {
     var bindAll = function() {
         var menuElements = document.querySelectorAll('[data-tab]');
         for(var i = 0; i < menuElements.length ; i++) {
@@ -32,6 +32,6 @@ window.onload = function Tabs() {
     };
 
     bindAll();
-};
+}
 
-// Tabs();
+ Tabs();
