@@ -29,9 +29,13 @@ section.main
                         li Number of room: 654
         .personal_info
             .tab
-                button.tablinks(onclick="openTab(event, 'requests')", id="defaultOpen") My requests
-                button.tablinks(onclick="openTab(event, 'recently_viewed')") Recently viewed units
-                button.tablinks(onclick="openTab(event, 'units')") My units
+                button.tablinks(data-tab="request") My requests
+                button.tablinks(data-tab="recently_viewed") Recently viewed units
+                button.tablinks(data-tab="units") My units
+            //.tab
+            //    button.tablinks(onclick="openTab(event, 'requests')", id="defaultOpen") My requests
+            //    button.tablinks(onclick="openTab(event, 'recently_viewed')") Recently viewed units
+            //    button.tablinks(onclick="openTab(event, 'units')") My units
             .tabcontent#requests
                 .requests_table
                     table.table-sortable.table-bordered
