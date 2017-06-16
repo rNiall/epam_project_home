@@ -29,14 +29,10 @@ section.main
                         li Number of room: 654
         .personal_info
             .tab
-                button.tablinks(data-tab="request") My requests
+                button.tablinks.active(data-tab="request") My requests
                 button.tablinks(data-tab="recently_viewed") Recently viewed units
                 button.tablinks(data-tab="units") My units
-            //.tab
-            //    button.tablinks(onclick="openTab(event, 'requests')", id="defaultOpen") My requests
-            //    button.tablinks(onclick="openTab(event, 'recently_viewed')") Recently viewed units
-            //    button.tablinks(onclick="openTab(event, 'units')") My units
-            .tabcontent#requests
+            #requests.tabcontent.active
                 .requests_table
                     table.table-sortable.table-bordered
                         thead(data-header="true")
@@ -53,7 +49,8 @@ section.main
                             +session("Praesent felis nibh, faucibus et interdum ut6","08/24/2017","Rejected")
                             +session("Praesent felis nibh, faucibus et interdum ut7","07/24/2015","Rejected")
                             +session("Praesent felis nibh, faucibus et interdum ut8","07/24/2015","Rejected")
-            .tabcontent#recently_viewed
+            #recently_viewed.tabcontent
                 span Test 2
-            .tabcontent#units
+            #units.tabcontent
                 span Test 3
+

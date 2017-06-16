@@ -108,11 +108,11 @@
         </div>
         <div class="personal_info">
           <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'requests')" id="defaultOpen">My requests</button>
-            <button class="tablinks" onclick="openTab(event, 'recently_viewed')">Recently viewed units</button>
-            <button class="tablinks" onclick="openTab(event, 'units')">My units</button>
+            <button class="tablinks active" data-tab="request">My requests</button>
+            <button class="tablinks" data-tab="recently_viewed">Recently viewed units</button>
+            <button class="tablinks" data-tab="units">My units</button>
           </div>
-          <div class="tabcontent" id="requests">
+          <div class="tabcontent active" id="requests">
             <div class="requests_table">
               <table class="table-sortable table-bordered">
                 <thead data-header="true">
@@ -174,7 +174,7 @@
     </section>
     <script src="assets/js/mobileNav.js"></script>
     <script src="assets/js/imgMap.js"></script>
-    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/tabs.js" defer></script>
     <script src="assets/js/table.js"></script>
     <!--script(src="assets/js/map.js")-->
     <!--script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsA9BHXC2Z6lS8eYnHY-Vqg9PakeW7CPE&callback=initMap" async defer)-->
